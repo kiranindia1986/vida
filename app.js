@@ -3,6 +3,9 @@ var app = express();
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+
+
+const PORT = process.env.PORT || 8000; 
+app.listen(PORT, () => { console.log(`App listening on port ${PORT}!`); });
+
+module.exports = app;
